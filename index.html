@@ -6,6 +6,44 @@
   <meta name="description" content="គេហទំព័របេតិកភណ្ឌខ្មែរ សម្រាប់សិក្សា ស្រាវជ្រាវ និងផ្សព្វផ្សាយភាសា អក្សរសាស្ត្រ វប្បធម៌ អរិយធម៌ និងប្រវត្តិសាស្ត្រខ្មែរ។">
   <meta name="theme-color" content="#142b25">
   <title>បេតិកភណ្ឌខ្មែរ | Khmer Heritage</title>
+  .ownership-section {
+  background: #fffdf8;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.ownership-card {
+  max-width: 850px;
+  margin: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.ownership-card h3 {
+  color: var(--green);
+  margin-top: 0;
+}
+
+.ownership-card p {
+  color: var(--muted);
+  margin: 9px 0;
+}
+
+.ownership-card strong {
+  color: var(--green);
+}
+
+.ownership-note {
+  border-left: 3px solid var(--gold);
+  padding: 12px 16px;
+  background: #f7f4ec;
+  margin-top: 18px;
+  font-size: .9rem;
+}
   <style>
     :root {
       --green: #142b25;
@@ -181,12 +219,35 @@
         <a href="#topics">ប្រធានបទ</a>
         <a href="#articles">អត្ថបទ</a>
         <a href="#about">អំពីគម្រោង</a>
+        <a href="#ownership">កម្មសិទ្ធិ</a>
         <a href="#contact">ទំនាក់ទំនង</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <section class="section ownership-section" id="ownership">
+  <div class="section-head">
+    <div class="eyebrow">PROJECT OWNERSHIP</div>
+    <h2>កម្មសិទ្ធិ និងអត្តសញ្ញាណគម្រោង</h2>
+    <p>ព័ត៌មានផ្លូវការស្តីពីអត្តសញ្ញាណ និងការទទួលខុសត្រូវលើគម្រោង Khmer Heritage។</p>
+  </div>
+
+  <div class="ownership-card">
+    <h3>KHMER HERITAGE</h3>
+    <p><strong>ឈ្មោះជាភាសាខ្មែរ៖</strong> បេតិកភណ្ឌខ្មែរ</p>
+    <p><strong>ប្រភេទគម្រោង៖</strong> គម្រោងចំណេះដឹង សិក្សា និងស្រាវជ្រាវឯករាជ្យ</p>
+    <p><strong>ម្ចាស់ និងអ្នកបង្កើតគម្រោង៖</strong> ឈួន សុផាត (Chhoun SOPHATH)</p>
+    <p><strong>ឆ្នាំបង្កើត៖</strong> ២០២៦</p>
+    <p><strong>បាវចនា៖</strong> ស្រាវជ្រាវ • អភិរក្ស • ផ្សព្វផ្សាយ</p>
+
+    <div class="ownership-note">
+      <strong>សេចក្ដីប្រកាសរក្សាសិទ្ធិ</strong>
+      <p>© ២០២៦ KHMER HERITAGE. រក្សាសិទ្ធិគ្រប់យ៉ាង។ ការចម្លង ឬប្រើប្រាស់ខ្លឹមសាររបស់គម្រោងនេះ គួរតែបញ្ជាក់ប្រភព និងគោរពសិទ្ធិរបស់អ្នកបង្កើត។</p>
+      <p>រូបភាព ឯកសារ និងស្នាដៃរបស់ភាគីទីបី នៅតែជាកម្មសិទ្ធិរបស់ម្ចាស់ដើមរៀងៗខ្លួន។ សេចក្ដីប្រកាសនេះមិនមែនជាភស្តុតាងនៃការចុះបញ្ជីពាណិជ្ជសញ្ញា ឬសិទ្ធិកម្មសិទ្ធិបញ្ញាផ្លូវការឡើយ។</p>
+    </div>
+  </div>
+</section>
     <section class="hero" id="home">
       <div class="hero-inner">
         <div>
@@ -288,7 +349,16 @@
   </main>
 
   <footer>
-    © <span id="year"></span> <span>បេតិកភណ្ឌខ្មែរ | Khmer Heritage</span> — រក្សាទុក និងចែករំលែកចំណេះដឹងខ្មែរ។
+    <footer>
+  © <span id="year"></span>
+  <span>KHMER HERITAGE | បេតិកភណ្ឌខ្មែរ</span>
+  <br>
+  ស្រាវជ្រាវ • អភិរក្ស • ផ្សព្វផ្សាយ
+  <br>
+  បង្កើត និងគ្រប់គ្រងដោយ ឈួន សុផាត (Chhoun SOPHATH)
+  <br>
+  រក្សាសិទ្ធិគ្រប់យ៉ាង។
+</footer>
   </footer>
 
   <script>
