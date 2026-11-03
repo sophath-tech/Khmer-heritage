@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="គេហទំព័របេតិកភណ្ឌខ្មែរ សម្រាប់សិក្សា ស្រាវជ្រាវ និងផ្សព្វផ្សាយភាសា អក្សរសាស្ត្រ វប្បធម៌ អរិយធម៌ និងប្រវត្តិសាស្ត្រខ្មែរ។">
+  <meta name="theme-color" content="#142b25">
+  <title>បេតិកភណ្ឌខ្មែរ | Khmer Heritage</title>
+  <style>
+    :root {
+      --green: #142b25;
+      --green-2: #1e4035;
+      --gold: #c8a45d;
+      --cream: #f7f4ec;
+      --paper: #fffdf8;
+      --ink: #26332e;
+      --muted: #69766f;
+      --line: #e7e1d4;
+      --shadow: 0 14px 38px rgba(20,43,37,.09);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: system-ui, -apple-system, "Noto Sans Khmer", "Khmer OS System", sans-serif;
+      line-height: 1.8;
+    }
+    a { color: inherit; text-decoration: none; }
+    .topbar {
+      background: var(--green);
+      color: #f8f3e8;
+      font-size: .88rem;
+      padding: 7px 5%;
+      text-align: center;
+    }
+    header {
+      background: rgba(255,253,248,.96);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+    }
+    .nav-wrap {
+      max-width: 1160px;
+      margin: auto;
+      min-height: 76px;
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-mark {
+      width: 46px; height: 46px; flex: 0 0 46px;
+      border: 1px solid var(--gold); border-radius: 50%;
+      display: grid; place-items: center; color: var(--gold);
+      font-size: 1.45rem; background: var(--green);
+    }
+    .brand strong { display: block; color: var(--green); font-size: 1.05rem; line-height: 1.35; }
+    .brand small { color: var(--muted); font-size: .75rem; letter-spacing: .04em; }
+    nav { display: flex; align-items: center; gap: 22px; }
+    nav a { color: #435149; font-size: .91rem; font-weight: 600; }
+    nav a:hover { color: #9a742f; }
+    .menu-btn {
+      display: none; border: 1px solid var(--line); background: white;
+      color: var(--green); border-radius: 10px; padding: 8px 12px; font-size: 1.1rem;
+    }
+    .hero {
+      color: #fffaf0;
+      background:
+        radial-gradient(ellipse at 80% 20%, rgba(200,164,93,.23), transparent 34%),
+        linear-gradient(120deg, rgba(13,36,30,.98), rgba(30,64,53,.94));
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1160px; margin: auto; padding: 82px 22px 86px;
+      display: grid; grid-template-columns: 1.2fr .8fr; gap: 42px; align-items: center;
+    }
+    .eyebrow { color: #e1c27f; font-weight: 700; letter-spacing: .08em; font-size: .84rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3.7rem); line-height: 1.35; margin: 12px 0 16px; }
+    .hero p { color: #e4e9e2; max-width: 650px; margin: 0 0 27px; font-size: 1.04rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-block; padding: 11px 20px; border-radius: 999px;
+      font-weight: 700; border: 1px solid var(--gold); transition: .2s;
+    }
+    .btn-primary { background: var(--gold); color: #1d2c25; }
+    .btn-outline { color: #fff8e9; }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+    .temple-art {
+      min-height: 260px; display: grid; place-items: center; position: relative;
+      border: 1px solid rgba(224,194,127,.35); border-radius: 48% 48% 18px 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.12));
+      padding: 25px;
+    }
+    .temple-art svg { width: 100%; max-width: 370px; height: auto; }
+    .section { max-width: 1160px; margin: auto; padding: 68px 22px; }
+    .section-head { max-width: 720px; margin-bottom: 28px; }
+    .section-head .eyebrow { color: #9a742f; }
+    h2 { color: var(--green); font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.45; margin: 6px 0 8px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 23px; box-shadow: 0 5px 18px rgba(20,43,37,.035);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .card-icon {
+      width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+      color: #8b692e; background: #f2ead8; font-size: 1.45rem; margin-bottom: 14px;
+    }
+    .card h3 { margin: 0 0 7px; color: var(--green); font-size: 1.12rem; }
+    .card p { color: var(--muted); margin: 0; font-size: .94rem; }
+    .about-band { background: #ece7da; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .about-inner { max-width: 1160px; margin: auto; padding: 62px 22px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 38px; align-items: center; }
+    .quote {
+      background: var(--green); color: #fff8e9; padding: 30px; border-radius: var(--radius);
+      border-left: 5px solid var(--gold); box-shadow: var(--shadow);
+    }
+    .quote p { font-size: 1.15rem; margin: 0 0 10px; }
+    .quote small { color: #e0c98f; }
+    .about-copy p { color: #56635b; margin: 8px 0; }
+    .search-row { display: flex; gap: 10px; margin: 18px 0 22px; }
+    .search-row input {
+      flex: 1; min-width: 0; padding: 12px 15px; border: 1px solid var(--line);
+      border-radius: 12px; background: var(--paper); font: inherit; outline: none;
+    }
+    .search-row input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,164,93,.16); }
+    .search-row button {
+      border: 0; border-radius: 12px; padding: 0 18px; background: var(--green);
+      color: white; font: inherit; font-weight: 700;
+    }
+    .article-card { display: flex; flex-direction: column; min-height: 220px; }
+    .tag { display: inline-block; color: #87652b; background: #f3ecdE; border-radius: 999px; padding: 3px 10px; font-size: .78rem; font-weight: 700; margin-bottom: 10px; align-self: flex-start; }
+    .article-card a { color: #936d2e; font-weight: 700; margin-top: auto; padding-top: 12px; }
+    .empty { display: none; color: var(--muted); padding: 18px 0; }
+    .contact {
+      background: var(--green); color: #fff8e9; text-align: center; padding: 54px 22px;
+    }
+    .contact h2 { color: #fff8e9; }
+    .contact p { color: #dce5dc; max-width: 680px; margin: 8px auto 20px; }
+    footer { background: #0d211c; color: #d6ded7; text-align: center; padding: 20px 16px; font-size: .86rem; }
+    footer span { color: #d9b76d; }
+    @media (max-width: 800px) {
+      .hero-inner, .about-inner { grid-template-columns: 1fr; }
+      .temple-art { min-height: 210px; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      nav { gap: 13px; }
+    }
+    @media (max-width: 620px) {
+      .nav-wrap { flex-wrap: wrap; }
+      .menu-btn { display: block; }
+      nav { display: none; width: 100%; flex-direction: column; align-items: flex-start; padding: 8px 0 12px; }
+      nav.open { display: flex; }
+      .hero-inner { padding-top: 55px; padding-bottom: 58px; }
+      .grid { grid-template-columns: 1fr; }
+      .section { padding-top: 48px; padding-bottom: 48px; }
+      .search-row { flex-direction: column; }
+      .search-row button { padding: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">ឃ្លាំងចំណេះដឹងសម្រាប់ការសិក្សា និងស្រាវជ្រាវអំពីបេតិកភណ្ឌខ្មែរ</div>
+
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Khmer Heritage home">
+        <span class="brand-mark">ក</span>
+        <span><strong>បេតិកភណ្ឌខ្មែរ</strong><small>KHMER HERITAGE</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="បើកម៉ឺនុយ" aria-expanded="false">☰</button>
+      <nav id="mainNav">
+        <a href="#home">ទំព័រដើម</a>
+        <a href="#topics">ប្រធានបទ</a>
+        <a href="#articles">អត្ថបទ</a>
+        <a href="#about">អំពីគម្រោង</a>
+        <a href="#contact">ទំនាក់ទំនង</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">KHMER HERITAGE • KNOWLEDGE • RESEARCH</div>
+          <h1>ស្វែងយល់ ថែរក្សា និងចែករំលែកបេតិកភណ្ឌខ្មែរ</h1>
+          <p>ជាទីកន្លែងប្រមូលផ្តុំចំណេះដឹង និងឯកសារសិក្សាស្រាវជ្រាវអំពីភាសា អក្សរសាស្ត្រ វប្បធម៌ អរិយធម៌ និងប្រវត្តិសាស្ត្រខ្មែរ។</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#topics">ស្វែងយល់ប្រធានបទ</a>
+            <a class="btn btn-outline" href="#about">អំពីគម្រោង</a>
+          </div>
+        </div>
+        <div class="temple-art" aria-label="រូបគំនូរនិមិត្តសញ្ញាប្រាសាទ">
+          <svg viewBox="0 0 420 290" role="img" aria-label="រូបគំនូរប្រាសាទបែបនិមិត្តសញ្ញា">
+            <g fill="none" stroke="#d8b86f" stroke-width="3" stroke-linejoin="round">
+              <path d="M28 248H392M54 235H366M82 220H338"/>
+              <path d="M95 220V166H325V220M113 166V145H307V166"/>
+              <path d="M132 145L150 111H270L288 145M150 111L166 84H254L270 111"/>
+              <path d="M166 84L180 58H240L254 84M180 58L193 31H227L240 58"/>
+              <path d="M193 31L210 10L227 31"/>
+              <path d="M170 220V178H250V220M188 220V190H232V220"/>
+              <path d="M65 220V190H95V220M325 220V190H355V220"/>
+              <path d="M105 184H315M122 157H298M158 121H262"/>
+            </g>
+            <g fill="#d8b86f" opacity=".8">
+              <circle cx="210" cy="10" r="4"/><path d="M205 248h10v-20h-10z"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="topics">
+      <div class="section-head">
+        <div class="eyebrow">OUR KNOWLEDGE AREAS</div>
+        <h2>វិស័យសិក្សាស្រាវជ្រាវ</h2>
+        <p>ប្រធានបទសំខាន់ៗដែលគម្រោងនេះមានគោលបំណងប្រមូលផ្តុំ និងរៀបចំជាឯកសារចំណេះដឹង។</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="card-icon">អក្សរ</div><h3>ភាសា និងអក្សរសាស្ត្រខ្មែរ</h3><p>ការសិក្សាពាក្យពេចន៍ រចនាបថ អត្ថន័យ និងស្នាដៃអក្សរសាស្ត្រខ្មែរ។</p></article>
+        <article class="card"><div class="card-icon">វប្ប</div><h3>វប្បធម៌ និងទំនៀមទម្លាប់</h3><p>ចំណេះដឹងអំពីប្រពៃណី ពិធីបុណ្យ សិល្បៈ និងរបៀបរស់នៅរបស់ខ្មែរ។</p></article>
+        <article class="card"><div class="card-icon">ប្រាសាទ</div><h3>អរិយធម៌ និងស្ថាបត្យកម្ម</h3><p>ការសិក្សាអំពីសំណង់បុរាណ សិលាចារឹក សិល្បៈ និងស្នាដៃស្ថាបត្យកម្ម។</p></article>
+        <article class="card"><div class="card-icon">ប្រវត្តិ</div><h3>ប្រវត្តិសាស្ត្រខ្មែរ</h3><p>ការកត់ត្រា និងសិក្សាព្រឹត្តិការណ៍ បុគ្គល សម័យកាល និងប្រភពប្រវត្តិសាស្ត្រ។</p></article>
+        <article class="card"><div class="card-icon">ស្រាវ</div><h3>ការស្រាវជ្រាវ និងឯកសារ</h3><p>ការប្រមូលប្រភព ការផ្ទៀងផ្ទាត់ព័ត៌មាន និងការរៀបចំឯកសារយោង។</p></article>
+        <article class="card"><div class="card-icon">ជំនាន់</div><h3>ចំណេះដឹងសម្រាប់អនាគត</h3><p>ចែករំលែកចំណេះដឹងដល់សិស្ស និស្សិត អ្នកស្រាវជ្រាវ និងសាធារណជន។</p></article>
+      </div>
+    </section>
+
+    <div class="about-band" id="about">
+      <div class="about-inner">
+        <div class="quote">
+          <p>«ការថែរក្សាបេតិកភណ្ឌ គឺជាការថែរក្សាអត្តសញ្ញាណ និងការចងចាំរបស់ជាតិ»</p>
+          <small>គោលគំនិតរបស់គម្រោង Khmer Heritage</small>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">ABOUT THE PROJECT</div>
+          <h2>អំពីគម្រោង Khmer Heritage</h2>
+          <p>បេតិកភណ្ឌខ្មែរ គឺជាគម្រោងចំណេះដឹងឌីជីថល ដែលមានគោលបំណងសិក្សា ស្រាវជ្រាវ កត់ត្រា និងផ្សព្វផ្សាយអំពីមរតកវប្បធម៌ និងបញ្ញាស្មារតីរបស់ខ្មែរ។</p>
+          <p>ខ្លឹមសារនៅលើគេហទំព័រនេះនឹងត្រូវរៀបចំជាបន្តបន្ទាប់ ដោយផ្តោតលើភាពច្បាស់លាស់ ការយោងប្រភព និងការគោរពតម្លៃប្រវត្តិសាស្ត្រ។</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="articles">
+      <div class="section-head">
+        <div class="eyebrow">RESEARCH & ARTICLES</div>
+        <h2>អត្ថបទ និងឯកសារសិក្សា</h2>
+        <p>ផ្នែកនេះអាចបន្ថែមអត្ថបទស្រាវជ្រាវថ្មីៗរបស់អ្នកនៅពេលក្រោយ។ សាកល្បងស្វែងរកតាមចំណងជើង ឬប្រធានបទ។</p>
+      </div>
+      <div class="search-row">
+        <input id="articleSearch" type="search" placeholder="ស្វែងរកអត្ថបទ ឬប្រធានបទ..." aria-label="ស្វែងរកអត្ថបទ">
+        <button id="searchBtn" type="button">ស្វែងរក</button>
+      </div>
+      <div class="grid" id="articleGrid">
+        <article class="card article-card" data-search="ភាសា អក្សរសាស្ត្រ ពាក្យខ្មែរ">
+          <span class="tag">ភាសាខ្មែរ</span><h3>ការសិក្សាពាក្យ និងអត្ថន័យក្នុងភាសាខ្មែរ</h3>
+          <p>កន្លែងសម្រាប់បន្ថែមអត្ថបទអំពីពាក្យពេចន៍ ប្រភពពាក្យ និងការប្រើប្រាស់ភាសា។</p>
+          <a href="#contact">បន្ថែមអត្ថបទនៅពេលក្រោយ →</a>
+        </article>
+        <article class="card article-card" data-search="វប្បធម៌ ប្រពៃណី ទំនៀមទម្លាប់">
+          <span class="tag">វប្បធម៌</span><h3>ប្រពៃណី និងទំនៀមទម្លាប់ខ្មែរ</h3>
+          <p>កន្លែងសម្រាប់កត់ត្រាចំណេះដឹងអំពីពិធីប្រពៃណី និងមរតកវប្បធម៌។</p>
+          <a href="#contact">បន្ថែមអត្ថបទនៅពេលក្រោយ →</a>
+        </article>
+        <article class="card article-card" data-search="ប្រវត្តិសាស្ត្រ បេតិកភណ្ឌ ប្រាសាទ">
+          <span class="tag">ប្រវត្តិសាស្ត្រ</span><h3>ការសិក្សាបេតិកភណ្ឌ និងសំណង់បុរាណ</h3>
+          <p>កន្លែងសម្រាប់បន្ថែមការស្រាវជ្រាវអំពីទីតាំងបុរាណ និងឯកសារយោង។</p>
+          <a href="#contact">បន្ថែមអត្ថបទនៅពេលក្រោយ →</a>
+        </article>
+      </div>
+      <p class="empty" id="noResults">រកមិនឃើញលទ្ធផលទេ។ សូមសាកល្បងពាក្យផ្សេង។</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="eyebrow">KEEP LEARNING • KEEP PRESERVING</div>
+      <h2>រួមគ្នាថែរក្សាមរតកខ្មែរ</h2>
+      <p>គេហទំព័រនេះកំពុងអភិវឌ្ឍ។ អត្ថបទ រូបភាព និងឯកសារយោងនឹងត្រូវបន្ថែម និងកែលម្អជាបន្តបន្ទាប់។</p>
+      <a class="btn btn-primary" href="#home">ត្រឡប់ទៅខាងលើ ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> <span>បេតិកភណ្ឌខ្មែរ | Khmer Heritage</span> — រក្សាទុក និងចែករំលែកចំណេះដឹងខ្មែរ។
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const searchInput = document.getElementById('articleSearch');
+    const articles = [...document.querySelectorAll('.article-card')];
+    const noResults = document.getElementById('noResults');
+    function filterArticles() {
+      const query = searchInput.value.trim().toLocaleLowerCase();
+      let visible = 0;
+      articles.forEach(article => {
+        const haystack = (article.innerText + ' ' + article.dataset.search).toLocaleLowerCase();
+        const match = haystack.includes(query);
+        article.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      noResults.style.display = visible ? 'none' : 'block';
+    }
+    document.getElementById('searchBtn').addEventListener('click', filterArticles);
+    searchInput.addEventListener('input', filterArticles);
+    searchInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') filterArticles();
+    });
+  </script>
+</body>
+</html>
