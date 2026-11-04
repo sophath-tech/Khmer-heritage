@@ -70,13 +70,19 @@
       display: none; border: 1px solid var(--line); background: white;
       color: var(--green); border-radius: 10px; padding: 8px 12px; font-size: 1.1rem;
     }
-    .hero {
-      color: #fffaf0;
-      background:
-        radial-gradient(ellipse at 80% 20%, rgba(200,164,93,.23), transparent 34%),
-        linear-gradient(120deg, rgba(13,36,30,.98), rgba(30,64,53,.94));
-      overflow: hidden;
-    }
+    
+.hero {
+  color: #fffaf0;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(13,36,30,.72),
+      rgba(30,64,53,.42)
+    ),
+    url('./angkor-wat-header.png') center center / cover no-repeat;
+  overflow: hidden;
+}
+
     .hero-inner {
       max-width: 1160px; margin: auto; padding: 82px 22px 86px;
       display: grid; grid-template-columns: 1.2fr .8fr; gap: 42px; align-items: center;
