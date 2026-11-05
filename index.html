@@ -105,6 +105,53 @@
       padding: 25px;
     }
     .temple-art svg { width: 100%; max-width: 370px; height: auto; }
+    .hero-founder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 25px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--gold);
+  border-radius: 18px;
+}
+
+.hero-founder img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--gold);
+  border-radius: 12px;
+}
+
+.hero-founder-info h2 {
+  font-family: "Moul", serif;
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+}
+
+.hero-founder-info p {
+  margin: 0 0 8px;
+}
+
+.hero-founder-info span {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+@media (max-width: 600px) {
+  .hero-founder {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .hero-founder img {
+    width: 125px;
+    height: 160px;
+  }
+}
     .section { max-width: 1160px; margin: auto; padding: 68px 22px; }
     .section-head { max-width: 720px; margin-bottom: 28px; }
     .section-head .eyebrow { color: #9a742f; }
@@ -300,23 +347,7 @@ height: 185px;
             <a class="btn btn-outline" href="#about">អំពីគម្រោង</a>
           </div>
         </div>
-        <div class="temple-art" aria-label="រូបគំនូរនិមិត្តសញ្ញាប្រាសាទ">
-          <svg viewBox="0 0 420 290" role="img" aria-label="រូបគំនូរប្រាសាទបែបនិមិត្តសញ្ញា">
-            <g fill="none" stroke="#d8b86f" stroke-width="3" stroke-linejoin="round">
-              <path d="M28 248H392M54 235H366M82 220H338"/>
-              <path d="M95 220V166H325V220M113 166V145H307V166"/>
-              <path d="M132 145L150 111H270L288 145M150 111L166 84H254L270 111"/>
-              <path d="M166 84L180 58H240L254 84M180 58L193 31H227L240 58"/>
-              <path d="M193 31L210 10L227 31"/>
-              <path d="M170 220V178H250V220M188 220V190H232V220"/>
-              <path d="M65 220V190H95V220M325 220V190H355V220"/>
-              <path d="M105 184H315M122 157H298M158 121H262"/>
-            </g>
-            <g fill="#d8b86f" opacity=".8">
-              <circle cx="210" cy="10" r="4"/><path d="M205 248h10v-20h-10z"/>
-            </g>
-          </svg>
-        </div>
+        
       </div>
     </section>
 
