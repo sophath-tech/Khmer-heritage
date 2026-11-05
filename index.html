@@ -207,7 +207,53 @@
       margin-top: 18px;
       font-size: .9rem;
     }
-  </style>
+  </style>/* FOUNDER PROFILE */
+.founder-profile {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 28px;
+  padding: 20px;
+  background: #fffdf8;
+  border: 1px solid #c8a45d;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(20,43,37,.08);
+}
+
+.founder-profile img {
+  width: 145px;
+  height: 175px;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid #c8a45d;
+  border-radius: 12px;
+}
+
+.founder-info h3 {
+  font-family: "Moul", serif;
+  color: #142b25;
+  font-size: 19px;
+  line-height: 1.8;
+  margin: 0 0 8px;
+}
+
+.founder-info p {
+  color: #45534b;
+  margin: 0 0 8px;
+}
+
+.founder-info span {
+  color: #a38443;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .founder-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 </head>
 <body>
   <div class="topbar">ឃ្លាំងចំណេះដឹងសម្រាប់ការសិក្សា និងស្រាវជ្រាវអំពីបេតិកភណ្ឌខ្មែរ</div>
@@ -351,7 +397,15 @@
         <strong>អ្នកបង្កើតគម្រោង៖</strong>
         ឈួន សុផាត (Chhoun SOPHATH)
       </p>
-
+<div class="founder-profile">
+  <img src="./founder-chhoun-sophath.png"
+       alt="ឈួន សុផាត ស្ថាបនិក KHMER HERITAGE">
+  <div class="founder-info">
+    <h3>ឈួន សុផាត</h3>
+    <p>ស្ថាបនិក និងអ្នកបង្កើតគម្រោង</p>
+    <span>CHHOUN SOPHATH</span>
+  </div>
+</div>
     </div>
   </div>
 </div>
